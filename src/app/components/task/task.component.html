@@ -1,0 +1,9 @@
+<p *ngIf="task">
+  TaskId: {{task._id}}, 
+  Task: {{task.task}}, Task is done: {{task.isDone}}
+</p>
+<ul class="navbar-nav mr-auto">
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['/tasks']">Back to Tasks</a>
+  </li>
+</ul>

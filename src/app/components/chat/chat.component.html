@@ -1,0 +1,25 @@
+<div class="container chat-wrapper">
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <h3 class="text-center">
+        Chat
+        <button class="btn btn-danger" (click)="onClear()">Clear</button>
+      </h3>
+      <div class="name"></div>
+      <div class="chat">
+        <input type="text" class="form-control" placeholder="Enter name..." />
+        <br>
+        <div class="card">
+          <div class="card-clock">
+            <ul>
+              <li *ngFor="let message of messages">{{message.name}}:{{message.message}}</li>
+            </ul>
+          </div>
+        </div>
+        <br>
+        <div>{{status}}</div>
+        <textarea class="form-control" placeholder="Enter message" [(ngModel)]="message" value="ngModel" (keydown)="onMessageText($event, message)"></textarea>
+      </div>
+    </div>
+  </div>
+</div>

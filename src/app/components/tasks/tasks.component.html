@@ -1,0 +1,15 @@
+<ul *ngIf="tasksResponse">
+  <li *ngIf="!tasksResponse.tasks.length">No tasks</li>
+  <li *ngFor="let task of tasksResponse.tasks; let i=index">
+    <div class="form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" [(ngModel)]="task.isDone" [(checked)]="ngModel" type="checkbox"> Done?
+      </label>
+    </div>
+    <span (click)="goToTask(task._id)">{{task.task}}</span>
+    <button class="btn btn-sm btn-danger" (click)="updateTask(task);">Update</button>
+    <button class="btn btn-sm btn-danger" (click)="deleteTask(task._id)">Delete</button>
+  </li>
+</ul>
+<input [(ngModel)]="newTask" name="newTask" [value]="ngModel"/>
+<button class="btn btn-sm btn-primary" (click)="addNewTask(newTask)">Add Task</button>
