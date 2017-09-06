@@ -30,7 +30,9 @@ const appRoutes: Routes = [
   {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
   {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
   {path: 'tasks', component: TasksComponent, canActivate: [AuthGuard]},
-  {path: 'task/:id', component: TaskComponent, canActivate: [AuthGuard]}
+  {path: 'task/:id', component: TaskComponent, canActivate: [AuthGuard]},
+  {path: 'chat', component: ChatComponent, canActivate: [AuthGuard]},
+  {path: 'chat/:room', component: ChatComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({

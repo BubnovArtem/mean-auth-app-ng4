@@ -9,7 +9,8 @@ export class AuthService {
   authToken: any;
   user: any;
 
-  constructor(private http: Http) { }
+  constructor(private http: Http) {
+  }
 
   registerUser(user): Observable<any> {
     let headers = new Headers();

@@ -16,9 +16,8 @@
       <li *ngIf="authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']">
         <a class="nav-link" [routerLink]="['/tasks']">Tasks</a>
       </li>
-      <li *ngIf="authService.loggedIn()" class="nav-item">
-        <a class="nav-link" (click)="showChat=!showChat">Chat</a>
-        <app-chat *ngIf="showChat"></app-chat>
+      <li *ngIf="authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']">
+        <a class="nav-link" [routerLink]="['/chat']">Chat</a>
       </li>
       <li *ngIf="authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']">
         <a class="nav-link" [routerLink]="['/profile']">Profile</a>
